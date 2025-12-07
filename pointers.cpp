@@ -18,6 +18,28 @@ int main(){
     cout<<sizeof(num)<<endl;
     cout<<sizeof(ptr);
 
+    //pointer to int is created and pointing to some garbage address
+    int *p;
+
+    int nums=6;
+    int *pt=&nums;
+    int a=nums;
+    cout<<nums;
+    (*pt)++;
+    cout<<nums;
+
+    int *q=pt;
+
+    cout<<pt<<q<<endl;
+    cout<<*pt<<*q<<endl;
+
+    //imp concept
+
+
+    int i=3;
+    int *t=&i;
+    
+
 
 
 
