@@ -1,6 +1,23 @@
 #include<iostream>
 using namespace std;
 
+void print(int *p){
+    cout<<p<<endl;
+}
+
+void update(int *p){
+    p=p+1;
+}
+
+int getSum(int arr[],int n){
+    int sum=0;
+    for (int i = 0; i < n; i++)
+    {
+        sum=sum+arr[i];
+    }
+    return sum;
+}
+
 int main(){
     // int arr[10]={2,5,6,7};
     // cout<<"Address of first memory blovk "<<(*arr)+1<<endl;
@@ -34,17 +51,26 @@ int main(){
     // ptr=ptr+1;
     // cout<<ptr<<endl;
 
-    int arr[5]={1,2,3,4,5};
-    char ch[6]="abcde";
-    cout<<arr<<endl;
-    cout<<ch<<endl;
-    //cout implementation is different in int and char
-    char *c=&ch[0];
-    cout<<c<<endl;
+    // int arr[5]={1,2,3,4,5};
+    // char ch[6]="abcde";
+    // cout<<arr<<endl;
+    // cout<<ch<<endl;
+    // //cout implementation is different in int and char
+    // char *c=&ch[0];
+    // cout<<c<<endl;
     
-    char temp='z';
-    char *p=&temp;
-    cout<<p<<endl;
+    // char temp='z';
+    // char *p=&temp;
+    // cout<<p<<endl;
+
+    int valu=8;
+    int *p=&valu;
+    print(p);
+
+    update(p);
+
+    int arr[5]={1,2,3,4,5};
+    cout<<"he sum is"<<getSum(arr,5);
 
     return 0;
 }
